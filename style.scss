@@ -1,0 +1,373 @@
+:root{
+    --blue:#2980b9;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Open Sans', sans-serif;
+text-transform: capitalize;
+text-decoration:none;
+transition:all .2cubic-bezier(.37,1.14,.26,1.24);
+}
+*::selection{
+    background:#ff3300;
+    color:#fff;
+}
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+}
+
+//header section
+.first{
+    padding-left: 6rem;
+}
+header .header-1{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1.5rem;
+    width:100%;
+    z-index:1000;
+    .logo1{
+        border:1px solid rgb(187, 187, 243);
+        border-radius:10px;
+        
+    }
+    .logo2{
+        border:1px solid rgb(190, 224, 197);
+        border-radius:10px;
+
+    }
+    .logo3{
+        border:1px solid rgb(223, 184, 187);
+        border-radius:10px;
+    }
+
+    .logo{
+        font-size:2rem;
+        color:#666;
+        text-decoration: none;
+        padding:0.5rem;
+        i{
+            color:var(--blue);
+            padding: 1px;
+        }
+    }
+
+
+    
+    .form-container form{
+        display:flex;
+
+        #search{
+            height:4rem;
+            width:50rem;
+            outline:none;
+            border:.2rem solid#666;
+            font-size:1.5rem;
+            padding:0 1rem;
+           
+        }
+        label{
+            height:4rem;
+            width:5rem;
+            text-align:center;
+            line-height: 4rem;
+            font-size:2rem;
+            cursor:pointer;
+            background: var(--blue);
+            color:#fff;
+           
+        }
+
+    }
+}
+header .header-1 .form-container form:focus{
+    border-color:var(--blue);
+}
+header .header-1 .form-container label:hover{
+    color:rgb(0, 255, 106);
+}
+.conta_fir{
+    justify-content: space-between;
+
+    .conta_item{
+    
+        .ab{
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: 2rem;
+            box-shadow: rgba(216, 29, 29, 0.4);
+
+        }
+        p{
+            font-size: 2rem;
+            font-weight: 1.3rem;
+            box-shadow: rgba(29, 2, 44, 0.877);
+        }
+        a{
+            border: 1px solid rgb(236, 128, 128);
+            border-radius: 4px;
+
+            font-size:1.5rem;
+            font-weight: 1.1rem;
+            margin-left: 0.5rem;
+            cursor:pointer;
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .conta_second{
+        justify-content:center;
+        
+        .abc{
+            margin-top: 2rem;
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: 2rem;
+        }
+        i{
+            font-size: 4rem;
+            padding: 1rem;
+            color:var(--blue);
+            justify-content:space-between;
+        }
+    }
+}
+ .conta_fir .conta_item a:hover{
+    color:rgb(209, 96, 209);
+}
+header .header-2{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1.5rem;
+    width:100%;
+    z-index:1000;
+    background: var(--blue);
+
+    .header-active{
+        position:fixed;
+        top:0;left:0;
+        box-shadow:0 .1rem .3rem rgba(0,0,0,0.3);
+    }
+    #menu{
+        font-size: 3rem;
+        color:#fff;
+        cursor:pointer;
+        display:none;
+    }
+
+    .navbar ul{
+        list-style: none;
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+
+        li{
+            margin:0 1rem;
+            a{
+                font-size:2rem;
+                color:#fff;   
+            }
+        }
+    }
+
+    .icons a{
+        color:#fff;
+        font-size:2rem;
+        padding:0 1rem;
+
+    }
+}
+header .header-2 .navbar ul li a.active,
+header .header-2 .navbar ul li a:hover{
+    color:burlywood;
+}
+header .header-2 .icons a:hover{
+    color:rgb(209, 96, 209);
+}
+.home .carousel  .carousel_item {
+    position: relative;
+    background-color: rgb(195, 192, 199);
+
+    img{
+        height:100vh;
+        width:100%;
+        object-fit:cover;
+
+    }
+    .content{
+        position: absolute;
+        top:50%; left:5%;
+        transform:translateY(-50%);
+        
+        h3{
+            color:rgba(175, 224, 135, 0.966);
+            text-shadow:0 .3rem .5rem #000;
+            font-size: 4rem;
+            text-transform: uppercase;
+
+        }
+        p{
+            color:rgb(238, 104, 15);
+            font-size: 3rem;
+            padding:2rem 0;
+            width:50rem; 
+            background-color: rgba(65, 59, 66, 0.164);
+            backface-visibility: black;
+        }
+        .btn{
+            height:5rem;
+            width:16rem;
+            background:var(--blue);
+            color:#fff;
+            font-size:2rem;
+            cursor:pointer;
+            border:none;
+            outline:none;
+        }
+    }
+}
+.home .carousel .carousel_item .btn:hover{
+    letter-spacing: .2rem;
+    opacity:.8rem;
+
+}
+.home .carousel .owl-prev, .home .carousel .owl-next{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    outline:none;
+}
+.home .carousel .owl-prev{
+    left:1.3rem;
+}
+.home .carousel .owl-next{
+    right:1.3rem;
+}
+.home .carousel .owl-prev span, .home .carousel .owl-next span{
+    color:black;
+    font-size:7rem;
+}
+
+// media queries //
+@media(max-width:860px){
+    html{
+        font-size:56%;
+        opacity: 0.8;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size:55%;
+    }
+    .logo1{
+        border:0.7px solid rgb(187, 187, 243);
+        border-radius:7px;
+        
+    }
+    .logo2{
+        border:1px solid rgba(29, 2, 44, 0.877);
+        border-radius:7px;
+
+    }
+    .logo3{
+        border:0.7px solid rgb(223, 184, 187);
+        border-radius:5px;
+    }
+    .logo{
+        font-size:2.1rem;
+    }
+  
+    header .header-1 .form-container form #search{
+        width:100%;
+    }
+    header .header-2{
+        
+
+        #menu{
+            display:block;
+        }
+        
+        .navbar{
+            position:fixed;
+            top:-200rem; left:50%;
+            transform:translate(-50%,-50%);
+            box-shadow: 0 0 0 100vh rgba(0,0,0,0.3);
+            z-index:10000;
+            opacity: 0;
+            ul{
+                flex-flow:column;
+                background:linear-gradient(var(--blue),blueviolet);
+                border:.2rem solid #fff;
+                box-shadow:0 .3rem .5rem #000;
+                padding:4rem 0;
+                width:27rem;
+                li{
+                    width:100%;
+                    margin:1rem 0;
+                    text-align:center;
+                    a{
+                        font-size:3rem;
+                        display:block;
+                    }
+                }
+            }
+        }
+        .fa-times{
+            transform:rotate(180deg);
+        }
+        
+    }
+    header .header-2 .nav-toggle{
+        top:50%;
+        opacity:1;
+    }
+
+}
+@media(max-width:497px){
+    .logo3{
+        font-size: 1rem;
+        border:1px solid rgb(223, 184, 187);
+        border-radius:4px;
+    }
+}
+
+@media(max-width:400px){
+    header .header-1{
+        flex-flow:column;
+        padding:1rem;
+         
+
+        .logo1{
+            border:1px solid rgb(187, 187, 243);
+            border-radius:4px;
+            
+        }
+        .logo2{
+            border:1px solid rgb(190, 224, 197);
+            border-radius:4px;
+    
+        }
+        .logo3{
+            border:1px solid rgb(223, 184, 187);
+            border-radius:4px;
+        }
+        .row{
+            margin-bottom:10px;
+        }
+        .logo{
+            font-size:1.2rem; 
+        }
+        form #search{
+            width:80%;
+        }
+    }
+}
+
